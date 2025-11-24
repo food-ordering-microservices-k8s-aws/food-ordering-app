@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
+import { RestaurantCatalogModule } from './restaurant-catalog/restaurant-catalog.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { HeaderModule } from './header/header.module';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    RestaurantCatalogModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
