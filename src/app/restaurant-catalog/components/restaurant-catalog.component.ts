@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Restaurant } from 'src/app/shared/models/restaurant';
+import { Restaurant } from 'src/app/shared/models/Restaurant';
 import { RestaurantCatelogService } from '../service/restaurant-catelog.service';
 import { Router } from '@angular/router';
 
@@ -16,8 +16,7 @@ export class RestaurantCatalogComponent {
     this.getAllRestaurants();
   }
 
-  constructor(private router: Router, 
-    private restaurantCatalogService: RestaurantCatelogService) { }
+  constructor(private router: Router, private restaurantCatalogService: RestaurantCatelogService) { }
 
   getAllRestaurants() {
     this.restaurantCatalogService.getAllRestaurants().subscribe(
@@ -38,6 +37,6 @@ export class RestaurantCatalogComponent {
   }
 
   onButtonClick(id: number) {
-    this.router.navigate(['/food-catalogue', id]);
+    this.router.navigate(['/food-inventory', id]);
   }
 }

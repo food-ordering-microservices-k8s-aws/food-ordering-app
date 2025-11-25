@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import { RestaurantCatalogRoutingModule } from './restaurant-catalog-routing.module';
 import { RestaurantCatalogComponent } from './components/restaurant-catalog.component';
@@ -11,7 +11,8 @@ import { RestaurantCatalogComponent } from './components/restaurant-catalog.comp
   ],
   imports: [
     CommonModule,
-    RestaurantCatalogRoutingModule
+    RestaurantCatalogRoutingModule,
+    NgOptimizedImage
   ]
 })
 export class RestaurantCatalogModule { }

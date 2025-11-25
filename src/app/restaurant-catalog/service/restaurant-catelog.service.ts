@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
 import { API_URL_Restaurant_Onbording } from "src/app/constants/url";
-import { Restaurant } from "src/app/shared/models/restaurant";
+import { Restaurant } from "src/app/shared/models/Restaurant";
 
 @Injectable({
     providedIn: 'root'
