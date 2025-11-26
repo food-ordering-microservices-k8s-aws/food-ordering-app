@@ -38,8 +38,11 @@ export class FoodInventoryComponent {
     this.foodInventoryService.getFoodInventoryByRestaurant(restaurant).subscribe(
       data => {
         this.foodInventoryResponse = data;
+      },
+      error => {
+        console.error('Failed to fetch food inventory data:', error);
       }
-    )
+    );
   }
 
   increment(food: any) {
@@ -70,6 +73,12 @@ export class FoodInventoryComponent {
   }
 
   onCheckOut() {
+    this.foodInventoryCart;
+    this.orderSummary = {
+      foodInventoryList: this.foodInventoryCart,
+      restaurantDTO: this.foodInventoryResponse.restaurantDTO
+    }
+    this.router.navigate(['/order-summary'], { queryParams: { data: JSON.stringify(this.orderSummary) } });
   }
 
 }

@@ -7,6 +7,11 @@ const routes: Routes = [
     path: 'food-inventory',
     loadChildren: () => import('./food-inventory/food-inventory.module')
       .then(m => m.FoodInventoryModule)
+  },
+  {
+    path: 'order-summary',
+    loadChildren: () => import('./order-summary/order-summary.module')
+      .then(m => m.OrderSummaryModule)
   }
 ];
 
